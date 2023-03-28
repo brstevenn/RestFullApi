@@ -102,7 +102,7 @@ Para agregar un nuevo artículo a la base de datos, realiza una solicitud POST a
 Para cargar datos desde un archivo JSON a la base de datos, realiza una solicitud POST a la siguiente URL:
 - **POST/papers/loaddata**
 - La solicitud cargará los datos del archivo arxivMetadataOaiSnapshot.json en la base de datos (Está limitado a cargar solo 100 articulos y no recibe parametros).
-<br>**_El archivo puede ser obtenido mediante este link de [Kaggle](https://www.kaggle.com/datasets/Cornell-University/arxiv)_**
+<br>**_El archivo puede ser obtenido mediante este link de [Kaggle](https://www.kaggle.com/datasets/Cornell-University/arxiv) y se debe poner en la carpeta raiz del proyecto_**
 
 ### Autores
 #### Obtener todos los autores (20 en 20)
