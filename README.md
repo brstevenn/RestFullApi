@@ -22,8 +22,9 @@ Ejecutar el proyecto desde Visual Studio.
 ### Articulos
 #### Obtener todos los artículos (20 en 20)
 Para obtener una lista de 20 artículos almacenados en la base de datos, realiza una solicitud GET a la siguiente URL:
-*GET/papers?page=1*
-La respuesta será un objeto JSON que contiene una lista de 20 artículos, puedes cambiar el valor de la pagina (Por defecto viene en 1) para recuperar los siguientes 20 articulos.
+- **GET/papers?page=1**
+- La respuesta será un objeto JSON que contiene una lista de 20 artículos, puedes cambiar el valor de la pagina (Por defecto viene en 1) para recuperar los siguientes 20 articulos.
+**_Modelo_**
 ```
 {
   "links": {
@@ -49,8 +50,9 @@ La respuesta será un objeto JSON que contiene una lista de 20 artículos, puede
 
 #### Obtener un artículo específico
 Para obtener información detallada sobre un artículo específico, realiza una solicitud GET a la siguiente URL:
-*GET/papers/{id}*
-Reemplaza {id} con el ID del artículo que deseas recuperar. La respuesta será un objeto JSON que contiene información detallada sobre el artículo.
+- **GET/papers/{id}**
+- Reemplaza {id} con el ID del artículo que deseas recuperar. La respuesta será un objeto JSON que contiene información detallada sobre el artículo.
+**_Modelo_**
 ```
 {
   "id": "string",
@@ -68,8 +70,9 @@ Reemplaza {id} con el ID del artículo que deseas recuperar. La respuesta será 
 
 #### Agregar un artículo
 Para agregar un nuevo artículo a la base de datos, realiza una solicitud POST a la siguiente URL:
-*POST/papers*
-La solicitud debe incluir un objeto JSON que represente el artículo que deseas agregar.
+- **POST/papers**
+- La solicitud debe incluir un objeto JSON que represente el artículo que deseas agregar.
+**_Modelo_**
 ```
 // En swagger el schema pide otros datos, pero no son necesarios, sigo realizando pruebas por si es necesario ajustarlo
 {
@@ -97,14 +100,15 @@ La solicitud debe incluir un objeto JSON que represente el artículo que deseas 
 
 #### Cargar todos los articulos
 Para cargar datos desde un archivo JSON a la base de datos, realiza una solicitud POST a la siguiente URL:
-*POST/papers/loaddata*
-La solicitud cargará los datos del archivo arxivMetadataOaiSnapshot.json en la base de datos (Está limitado a cargar solo 100 articulos y no recibe parametros).
+- **POST/papers/loaddata**
+- La solicitud cargará los datos del archivo arxivMetadataOaiSnapshot.json en la base de datos (Está limitado a cargar solo 100 articulos y no recibe parametros).
 
 ### Autores
 #### Obtener todos los autores (20 en 20)
 Para obtener una lista de 20 autores almacenados en la base de datos, realiza una solicitud GET a la siguiente URL:
-*GET/authors?page=1*
-La respuesta será un objeto JSON que contiene una lista de 20 autores, puedes cambiar el valor de la pagina (Por defecto vieve en 1) para recuperar los siguientes 20 autores.
+- **GET/authors?page=1**
+- La respuesta será un objeto JSON que contiene una lista de 20 autores, puedes cambiar el valor de la pagina (Por defecto vieve en 1) para recuperar los siguientes 20 autores.
+**_Modelo_**
 ```
 {
   "links": {
@@ -122,8 +126,9 @@ La respuesta será un objeto JSON que contiene una lista de 20 autores, puedes c
 
 #### Obtener un autor específico
 Para obtener información detallada sobre un autor específico, realiza una solicitud GET a la siguiente URL:
-*GET/authors/{id}*
-Reemplaza {id} con el ID del autor que deseas recuperar. La respuesta será un objeto JSON que contiene información detallada sobre el autor.
+- **GET/authors/{id}**
+- Reemplaza {id} con el ID del autor que deseas recuperar. La respuesta será un objeto JSON que contiene información detallada sobre el autor.
+**_Modelo_**
 ```
 {
   "id": "string",
@@ -136,8 +141,9 @@ Reemplaza {id} con el ID del autor que deseas recuperar. La respuesta será un o
 
 #### Agregar un autores
 Para agregar un nuevo artículo a la base de datos, realiza una solicitud POST a la siguiente URL:
-*POST/authors*
-La solicitud debe incluir un objeto JSON que represente el autor que deseas agregar.
+- **POST/authors**
+- La solicitud debe incluir un objeto JSON que represente el autor que deseas agregar.
+**_Modelo_**
 ```
 // En swagger el schema pide otros datos, pero no son necesarios, sigo realizando pruebas por si es necesario ajustarlo
 {
@@ -149,8 +155,9 @@ La solicitud debe incluir un objeto JSON que represente el autor que deseas agre
 ### Categorias
 #### Obtener todos las categorias (20 en 20)
 Para obtener una lista de 20 categorias almacenadas en la base de datos, realiza una solicitud GET a la siguiente URL:
-*GET/categories?page=1*
-La respuesta será un objeto JSON que contiene una lista de 20 categorias, puedes cambiar el valor de la pagina (Por defecto viene en 1) para recuperar las siguientes 20.
+- **GET/categories?page=1**
+- La respuesta será un objeto JSON que contiene una lista de 20 categorias, puedes cambiar el valor de la pagina (Por defecto viene en 1) para recuperar las siguientes 20.
+**_Modelo_**
 ```
 {
   "links": {
@@ -168,8 +175,9 @@ La respuesta será un objeto JSON que contiene una lista de 20 categorias, puede
 
 #### Obtener una categoria específico
 Para obtener información detallada sobre una categoria específica, realiza una solicitud GET a la siguiente URL:
-*GET/categories/{id}*
-Reemplaza {id} con el ID de la categoria que deseas recuperar. La respuesta será un objeto JSON que contiene información detallada sobre la categoria.
+- **GET/categories/{id}**
+- Reemplaza {id} con el ID de la categoria que deseas recuperar. La respuesta será un objeto JSON que contiene información detallada sobre la categoria.
+**_Modelo_**
 ```
 {
   "id": "string",
@@ -182,8 +190,9 @@ Reemplaza {id} con el ID de la categoria que deseas recuperar. La respuesta ser�
 
 #### Agregar una categoria
 Para agregar una nueva categoria a la base de datos, realiza una solicitud POST a la siguiente URL:
-*POST/categories*
-La solicitud debe incluir un objeto JSON que represente la categoria que deseas agregar.
+- **POST/categories**
+- La solicitud debe incluir un objeto JSON que represente la categoria que deseas agregar.
+**_Modelo_**
 ```
 {
 // En swagger el schema pide otros datos, pero no son necesarios, sigo realizando pruebas por si es necesario ajustarlo
@@ -194,7 +203,7 @@ La solicitud debe incluir un objeto JSON que represente la categoria que deseas 
 
 ## Contribución
 Si deseas contribuir a este proyecto, puedes hacer lo siguiente:
-*Aun no se aceptan contribuciones*
+**_*Aun no se aceptan contribuciones*_**
 
 ## Licencia
 Este proyecto está licenciado bajo la Licencia MIT. Para obtener más información, consulta el archivo LICENSE.txt.
