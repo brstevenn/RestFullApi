@@ -16,30 +16,185 @@ Restaurar los paquetes NuGet necesarios.
 Configurar la conexión a la base de datos en el archivo appsettings.json.
 Ejecutar el proyecto desde Visual Studio.
 
-## Uso
-### Obtener todos los artículos
-Para obtener una lista de todos los artículos almacenados en la base de datos, realiza una solicitud GET a la siguiente URL:
-/papers
-La respuesta será un objeto JSON que contiene una lista de todos los artículos.
+*Ya viene integrado Swagger por lo que se pueden probar los endpints desde ahí y especifica el formato de envio y respuesta*
 
-### Obtener un artículo específico
+## Métodos de los controladores
+### Articulos
+#### Obtener todos los artículos (20 en 20)
+Para obtener una lista de 20 artículos almacenados en la base de datos, realiza una solicitud GET a la siguiente URL:
+*GET/papers?page=1*
+La respuesta será un objeto JSON que contiene una lista de 20 artículos, puedes cambiar el valor de la pagina (Por defecto viene en 1) para recuperar los siguientes 20 articulos.
+```
+{
+  "links": {
+    "previousPageLink": "string",
+    "nextPageLink": "string"
+  },
+  "articles": [
+    {
+      "id": "string",
+      "title": "string",
+      "abstract": "string",
+      "authors": [
+        "string"
+      ],
+      "categories": [
+        "string"
+      ],
+      "publicationDate": "string"
+    }
+  ]
+}
+```
+
+#### Obtener un artículo específico
 Para obtener información detallada sobre un artículo específico, realiza una solicitud GET a la siguiente URL:
-/paper/{id}
+*GET/papers/{id}*
 Reemplaza {id} con el ID del artículo que deseas recuperar. La respuesta será un objeto JSON que contiene información detallada sobre el artículo.
+```
+{
+  "id": "string",
+  "title": "string",
+  "abstract": "string",
+  "authors": [
+    "string"
+  ],
+  "categories": [
+    "string"
+  ],
+  "publicationDate": "string"
+}
+```
 
-### Agregar un artículo
+#### Agregar un artículo
 Para agregar un nuevo artículo a la base de datos, realiza una solicitud POST a la siguiente URL:
-/paper
+*POST/papers*
 La solicitud debe incluir un objeto JSON que represente el artículo que deseas agregar.
+```
+// En swagger el schema pide otros datos, pero no son necesarios, sigo realizando pruebas por si es necesario ajustarlo
+{
+  "id": "string",
+  "submitter": "string",
+  "authors": "string",
+  "title": "string",
+  "comments": "string",
+  "journal-ref": "string",
+  "doi": "string",
+  "report-no": "string",
+  "categories": "string",
+  "license": "string",
+  "abstract": "string",
+  "versions": [
+    {
+      "id": "string",
+      "version": "string",
+      "created": "string"
+    }
+  ],
+  "update_date": "string"
+}
+```
 
-### Cargar datos
+#### Cargar todos los articulos
 Para cargar datos desde un archivo JSON a la base de datos, realiza una solicitud POST a la siguiente URL:
-/papers/loaddata
-La solicitud cargará los datos del archivo arxivMetadataOaiSnapshot.json en la base de datos.
+*POST/papers/loaddata*
+La solicitud cargará los datos del archivo arxivMetadataOaiSnapshot.json en la base de datos (Está limitado a cargar solo 100 articulos y no recibe parametros).
+
+### Autores
+#### Obtener todos los autores (20 en 20)
+Para obtener una lista de 20 autores almacenados en la base de datos, realiza una solicitud GET a la siguiente URL:
+*GET/authors?page=1*
+La respuesta será un objeto JSON que contiene una lista de 20 autores, puedes cambiar el valor de la pagina (Por defecto vieve en 1) para recuperar los siguientes 20 autores.
+```
+{
+  "links": {
+    "previousPageLink": "string",
+    "nextPageLink": "string"
+  },
+  "authors": [
+    {
+      "id": "string",
+      "name": "string"
+    }
+  ]
+}
+```
+
+#### Obtener un autor específico
+Para obtener información detallada sobre un autor específico, realiza una solicitud GET a la siguiente URL:
+*GET/authors/{id}*
+Reemplaza {id} con el ID del autor que deseas recuperar. La respuesta será un objeto JSON que contiene información detallada sobre el autor.
+```
+{
+  "id": "string",
+  "name": "string",
+  "articles": [
+    "string"
+  ]
+}
+```
+
+#### Agregar un autores
+Para agregar un nuevo artículo a la base de datos, realiza una solicitud POST a la siguiente URL:
+*POST/authors*
+La solicitud debe incluir un objeto JSON que represente el autor que deseas agregar.
+```
+// En swagger el schema pide otros datos, pero no son necesarios, sigo realizando pruebas por si es necesario ajustarlo
+{
+  "id": "string",
+  "authorName": "string"
+}
+```
+
+### Categorias
+#### Obtener todos las categorias (20 en 20)
+Para obtener una lista de 20 categorias almacenadas en la base de datos, realiza una solicitud GET a la siguiente URL:
+*GET/categories?page=1*
+La respuesta será un objeto JSON que contiene una lista de 20 categorias, puedes cambiar el valor de la pagina (Por defecto viene en 1) para recuperar las siguientes 20.
+```
+{
+  "links": {
+    "previousPageLink": "string",
+    "nextPageLink": "string"
+  },
+  "categories": [
+    {
+      "id": "string",
+      "categoryName": "string"
+    }
+  ]
+}
+```
+
+#### Obtener una categoria específico
+Para obtener información detallada sobre una categoria específica, realiza una solicitud GET a la siguiente URL:
+*GET/categories/{id}*
+Reemplaza {id} con el ID de la categoria que deseas recuperar. La respuesta será un objeto JSON que contiene información detallada sobre la categoria.
+```
+{
+  "id": "string",
+  "categoryName": "string",
+  "articles": [
+    "string"
+  ]
+}
+```
+
+#### Agregar una categoria
+Para agregar una nueva categoria a la base de datos, realiza una solicitud POST a la siguiente URL:
+*POST/categories*
+La solicitud debe incluir un objeto JSON que represente la categoria que deseas agregar.
+```
+{
+// En swagger el schema pide otros datos, pero no son necesarios, sigo realizando pruebas por si es necesario ajustarlo
+  "id": "string",
+  "categoryName": "string"
+}
+```
 
 ## Contribución
 Si deseas contribuir a este proyecto, puedes hacer lo siguiente:
 *Aun no se aceptan contribuciones*
 
 ## Licencia
-Este proyecto está licenciado bajo la Licencia MIT. Para obtener más información, consulta el archivo LICENSE.md.
+Este proyecto está licenciado bajo la Licencia MIT. Para obtener más información, consulta el archivo LICENSE.txt.
