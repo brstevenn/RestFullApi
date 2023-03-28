@@ -1,5 +1,5 @@
 # RestFulApi
-Esta aplicación web permite acceder a información de artículos científicos a través de una API RESTful. Los datos se almacenan en una base de datos en línea, y se pueden recuperar mediante solicitudes HTTP, los datos vienen de un dataset de <p><a href="https://www.kaggle.com/" target="_blank" rel="noopener noreferrer">Kaggle</p>.
+Esta aplicación web permite acceder a información de artículos científicos a través de una API RESTful. Los datos se almacenan en una base de datos en línea, y se pueden recuperar mediante solicitudes HTTP, los datos vienen de un dataset de <a href="https://www.kaggle.com/" target="_blank" rel="noopener noreferrer"/>Kaggle.
 
 ## Tecnologías utilizadas
 * ASP.NET Core
