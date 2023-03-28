@@ -24,7 +24,7 @@ Ejecutar el proyecto desde Visual Studio.
 Para obtener una lista de 20 artículos almacenados en la base de datos, realiza una solicitud GET a la siguiente URL:
 - **GET/papers?page=1**
 - La respuesta será un objeto JSON que contiene una lista de 20 artículos, puedes cambiar el valor de la pagina (Por defecto viene en 1) para recuperar los siguientes 20 articulos.
-<br> **_Modelo_**
+<br>**_Modelo_**
 ```
 {
   "links": {
@@ -52,7 +52,7 @@ Para obtener una lista de 20 artículos almacenados en la base de datos, realiza
 Para obtener información detallada sobre un artículo específico, realiza una solicitud GET a la siguiente URL:
 - **GET/papers/{id}**
 - Reemplaza {id} con el ID del artículo que deseas recuperar. La respuesta será un objeto JSON que contiene información detallada sobre el artículo.
-<br> **_Modelo_**
+<br>**_Modelo_**
 ```
 {
   "id": "string",
@@ -72,7 +72,7 @@ Para obtener información detallada sobre un artículo específico, realiza una 
 Para agregar un nuevo artículo a la base de datos, realiza una solicitud POST a la siguiente URL:
 - **POST/papers**
 - La solicitud debe incluir un objeto JSON que represente el artículo que deseas agregar.
-<br> **_Modelo_**
+<br>**_Modelo_**
 ```
 // En swagger el schema pide otros datos, pero no son necesarios, sigo realizando pruebas por si es necesario ajustarlo
 {
@@ -108,7 +108,7 @@ Para cargar datos desde un archivo JSON a la base de datos, realiza una solicitu
 Para obtener una lista de 20 autores almacenados en la base de datos, realiza una solicitud GET a la siguiente URL:
 - **GET/authors?page=1**
 - La respuesta será un objeto JSON que contiene una lista de 20 autores, puedes cambiar el valor de la pagina (Por defecto vieve en 1) para recuperar los siguientes 20 autores.
-<br> **_Modelo_**
+<br>**_Modelo_**
 ```
 {
   "links": {
@@ -128,7 +128,7 @@ Para obtener una lista de 20 autores almacenados en la base de datos, realiza un
 Para obtener información detallada sobre un autor específico, realiza una solicitud GET a la siguiente URL:
 - **GET/authors/{id}**
 - Reemplaza {id} con el ID del autor que deseas recuperar. La respuesta será un objeto JSON que contiene información detallada sobre el autor.
-<br> **_Modelo_**
+<br>**_Modelo_**
 ```
 {
   "id": "string",
@@ -143,7 +143,7 @@ Para obtener información detallada sobre un autor específico, realiza una soli
 Para agregar un nuevo artículo a la base de datos, realiza una solicitud POST a la siguiente URL:
 - **POST/authors**
 - La solicitud debe incluir un objeto JSON que represente el autor que deseas agregar.
-<br> **_Modelo_**
+<br>**_Modelo_**
 ```
 // En swagger el schema pide otros datos, pero no son necesarios, sigo realizando pruebas por si es necesario ajustarlo
 {
@@ -157,7 +157,7 @@ Para agregar un nuevo artículo a la base de datos, realiza una solicitud POST a
 Para obtener una lista de 20 categorias almacenadas en la base de datos, realiza una solicitud GET a la siguiente URL:
 - **GET/categories?page=1**
 - La respuesta será un objeto JSON que contiene una lista de 20 categorias, puedes cambiar el valor de la pagina (Por defecto viene en 1) para recuperar las siguientes 20.
-<br> **_Modelo_**
+<br>**_Modelo_**
 ```
 {
   "links": {
@@ -177,7 +177,7 @@ Para obtener una lista de 20 categorias almacenadas en la base de datos, realiza
 Para obtener información detallada sobre una categoria específica, realiza una solicitud GET a la siguiente URL:
 - **GET/categories/{id}**
 - Reemplaza {id} con el ID de la categoria que deseas recuperar. La respuesta será un objeto JSON que contiene información detallada sobre la categoria.
-<br> **_Modelo_**
+<br>**_Modelo_**
 ```
 {
   "id": "string",
@@ -192,7 +192,7 @@ Para obtener información detallada sobre una categoria específica, realiza una
 Para agregar una nueva categoria a la base de datos, realiza una solicitud POST a la siguiente URL:
 - **POST/categories**
 - La solicitud debe incluir un objeto JSON que represente la categoria que deseas agregar.
-<br> **_Modelo_**
+<br>**_Modelo_**
 ```
 {
 // En swagger el schema pide otros datos, pero no son necesarios, sigo realizando pruebas por si es necesario ajustarlo
@@ -203,7 +203,7 @@ Para agregar una nueva categoria a la base de datos, realiza una solicitud POST 
 
 ## Contribución
 Si deseas contribuir a este proyecto, puedes hacer lo siguiente:
-  **_Aun no se aceptan contribuciones_**
+<br>**_Aun no se aceptan contribuciones_**
 
 ## Licencia
 Este proyecto está licenciado bajo la Licencia MIT. Para obtener más información, consulta el archivo LICENSE.txt.
