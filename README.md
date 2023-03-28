@@ -194,8 +194,8 @@ Para agregar una nueva categoria a la base de datos, realiza una solicitud POST 
 - La solicitud debe incluir un objeto JSON que represente la categoria que deseas agregar.
 <br>**_Modelo_**
 ```
-{
 // En swagger el schema pide otros datos, pero no son necesarios, sigo realizando pruebas por si es necesario ajustarlo
+{
   "id": "string",
   "categoryName": "string"
 }
