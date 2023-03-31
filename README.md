@@ -10,10 +10,11 @@ Esta aplicación web permite acceder a información de artículos científicos a
 ## Instalación
 Para utilizar esta aplicación en tu máquina local, es necesario seguir estos pasos:
 
-Clonar este repositorio en tu máquina local.
-Abrir el archivo RestFulApi.sln con Visual Studio.
-Restaurar los paquetes NuGet necesarios.
-Configurar la conexión a la base de datos en el archivo appsettings.json.
+Clonar este repositorio en tu máquina local.<br>
+Abrir el archivo RestFulApi.sln con Visual Studio.<br>
+Restaurar los paquetes NuGet necesarios.<br>
+Configurar la conexión a la base de datos en el archivo appsettings.json.<br>
+Descarga el archivo [arxivMetadataOaiSnapshot.json](https://www.kaggle.com/datasets/Cornell-University/arxiv) proveniente de [Kaggle](https://www.kaggle.com/) y ubicalo en la carpeta raíz (Donde está program.cs)<br>
 Ejecutar el proyecto desde Visual Studio.
 
 *Ya viene integrado Swagger por lo que se pueden probar los endpints desde ahí y especifica el formato de envio y respuesta*
