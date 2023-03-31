@@ -17,7 +17,7 @@ Para utilizar esta aplicación en tu máquina local, es necesario seguir estos p
 5. Descarga el archivo [arxivMetadataOaiSnapshot.json](https://www.kaggle.com/datasets/Cornell-University/arxiv) proveniente de [Kaggle](https://www.kaggle.com/) y 6. ubicalo en la carpeta raíz (Donde está program.cs)<br>
 6. Ejecutar el proyecto desde Visual Studio.
 
-*Ya viene integrado Swagger por lo que se pueden probar los endpints desde ahí y especifica el formato de envio y respuesta*
+*Ya viene integrado Swagger por lo que se pueden probar los endpoints desde ahí y especifica el formato de envio y respuesta*
 
 ## Métodos de los controladores
 ### Articulos
