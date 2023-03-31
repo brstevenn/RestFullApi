@@ -14,7 +14,7 @@ Para utilizar esta aplicación en tu máquina local, es necesario seguir estos p
 2. Abrir el archivo RestFulApi.sln con Visual Studio.<br>
 3. Restaurar los paquetes NuGet necesarios.<br>
 4. Configurar la conexión a la base de datos en el archivo appsettings.json.<br>
-5. Descarga el archivo [arxivMetadataOaiSnapshot.json](https://www.kaggle.com/datasets/Cornell-University/arxiv) proveniente de [Kaggle](https://www.kaggle.com/) y 6. ubicalo en la carpeta raíz (Donde está program.cs)<br>
+5. Descarga el archivo [arxivMetadataOaiSnapshot.json](https://www.kaggle.com/datasets/Cornell-University/arxiv) proveniente de [Kaggle](https://www.kaggle.com/) y ubicalo en la carpeta raíz (Donde está program.cs)<br>
 6. Ejecutar el proyecto desde Visual Studio.
 
 *Ya viene integrado Swagger por lo que se pueden probar los endpoints desde ahí y especifica el formato de envio y respuesta*
